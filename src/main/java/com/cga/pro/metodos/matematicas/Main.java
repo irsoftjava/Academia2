@@ -2,7 +2,6 @@ package com.cga.pro.metodos.matematicas;
 
 import java.util.Arrays;
 import java.util.InputMismatchException;
-import java.util.MissingFormatArgumentException;
 import java.util.Scanner;
 
 public class Main {

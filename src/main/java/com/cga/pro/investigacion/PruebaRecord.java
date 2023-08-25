@@ -8,5 +8,6 @@ public class PruebaRecord {
 
         System.out.println(reg);
         System.out.println(reg.hashCode());
+        System.out.println("El usuario: " + reg.name() + ", es mayor de edad? " + reg.mayorDeEdad());
     }
 }
