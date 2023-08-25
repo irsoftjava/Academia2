@@ -4,22 +4,19 @@ import java.util.Arrays;
 
 public class Matrix {
 
-    public static int[] miSort(int[] arr) {
+    public static void miSort(int[] arr) {
         int len = arr.length;
-        int[] arrSort = new int[len];
-        int swap = 0;
+        int swap;
 
-        for (int i = 0; i < len - 1; i++) {
+        for (int i = 0; i < len - 1; i++)
             for (int j = i + 1; j < len; j++) {
-                if (arr[i] < arr[j]) {
-                    swap = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = swap;
+                if (arr[i] >= arr[j]) {
+                    continue;
                 }
+                swap = arr[i];
+                arr[i] = arr[j];
+                arr[j] = swap;
             }
-        }
-
-        return arr;
     }
 
     public static int sumatoriaFila(int [][] arr) {
@@ -30,53 +27,49 @@ public class Matrix {
         int total = 0;
 
         for (int i = 0; i < ilen - 1; i++) {
-            for (int j = 0; j < jlen; j++) {
-             sumatoria += arr[i][j];
+            for (int j = 0; j < jlen; j++) sumatoria += arr[i][j];
+            if (sumatoria <= total) {
+                continue;
             }
-            if (sumatoria > total) {
-                pos = i;
-                total = sumatoria;
-            }
+            pos = i;
+            total = sumatoria;
         }
 
         return pos;
     }
 
     public static void mostrarMatriz(int[][] mat) {
-        for (int i = 0; i < mat.length; i++) {
-            for (int j = 0; j < mat[i].length; j++) {
-                System.out.printf("%2d ", mat[i][j]);
+        for (int[] ints : mat) {
+            for (int anInt : ints) {
+                System.out.printf("%2d ", anInt);
             }
             System.out.println();
         }
     }
 
     public static void mostrarMatriz(String[][] mat) {
-        for (int i = 0; i < mat.length; i++) {
-            for (int j = 0; j < mat[i].length; j++) {
-                System.out.printf("%15s ", mat[i][j]);
+        for (String[] strings : mat) {
+            for (String string : strings) {
+                System.out.printf("%15s ", string);
             }
             System.out.println();
         }
     }
 
     public static String invertirString(String str) {
-        String strResultante = "";
-
-        for (int i = str.length() - 1; i >= 0; i--) {
-            strResultante += str.charAt(i);
-        }
-        return strResultante;
+        StringBuilder strResultante = new StringBuilder(str);
+        //for (int i = str.length() - 1; i >= 0; i--) strResultante.append(str.charAt(i));
+        return strResultante.reverse().toString();
     }
 
     public static String[][] invertirMatriz(String[][] arr, boolean invText) {
         int ilen = arr.length;
         int jlen = arr[0].length;
-        String str = "";
+        String str;
         String[][] matResultante = new String[ilen][jlen];
 
         int pi = 0;
-        int pj = 0;
+        int pj;
         for (int i = ilen - 1; i >= 0; i--) {
             pj = 0;
             for (int j = jlen - 1; j >= 0; j--) {
@@ -86,11 +79,9 @@ public class Matrix {
                     str = arr[i][j];
                 matResultante[pi][pj] = str;
                 pj++;
-                str = "";
             }
             pi++;
         }
-
         return matResultante;
     }
 
@@ -122,7 +113,7 @@ public class Matrix {
         String mayorPosicion = "";
         int numeroMenor = Integer.MAX_VALUE;
         String menorPosicion = "";
-        for (int i = 0; i < f; i++) {
+        for (int i = 0; i < f; i++)
             for (int j = 0; j < c; j++) {
                 if (a2d[i][j] > numeroMayor) {
                     numeroMayor = a2d[i][j];
@@ -133,7 +124,6 @@ public class Matrix {
                     menorPosicion = i + ", " + j;
                 }
             }
-        }
 
         System.out.println();
         System.out.printf("Mayor valor de la Matriz: %d y se encuentra en la posición %s.%n", numeroMayor, mayorPosicion);
@@ -141,7 +131,7 @@ public class Matrix {
 
         // 1.- Ordena de mayor a menor la primera fila y mostrarla.
         System.out.println();
-        int[] fila = new int[c];
+        int[] fila;
         fila = Arrays.copyOf(a2d[0], c);
         miSort(fila);
         System.out.println("Primera fila ordenada de Mayor a Menor: " + Arrays.toString(fila));
@@ -162,7 +152,7 @@ public class Matrix {
 
         // 4.- Realizar una matriz de 4 x 3, cargarla con String y mostrar el orden inverso al que se ha introducido.
         System.out.println();
-        String matriz[][] = {
+        String[][] matriz = {
                 {"Perú","Liechtenstein","Cuba"},
                 {"Honduras","Francia","Inglaterra"},
                 {"Japon","Italia","Colombia"},
@@ -171,11 +161,9 @@ public class Matrix {
         System.out.println("Mostrando Matriz Original.");
         mostrarMatriz(matriz);
 
-        String matrizInv[][] = new String[4][3];
-
         System.out.println();
         System.out.println("Mostrando Matriz Invertida.");
-        matrizInv = invertirMatriz(matriz, true);
+        String[][] matrizInv = invertirMatriz(matriz, false);
         mostrarMatriz(matrizInv);
     }
 
