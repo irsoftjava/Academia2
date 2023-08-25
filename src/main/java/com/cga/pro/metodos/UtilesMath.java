@@ -67,7 +67,7 @@ public class UtilesMath {
     // aLaN: Funcion recursiva que devuelve el valor de 'a' elevado a la potencia de 'exp'
     // parámetros: Valores 'base' de tipo Double y 'exp' de tipo Integer.
     public double aLaN(double base, int exp) {
-        double resp = 0;
+        double resp;
 
         if (exp != 0) {
             resp = base * aLaN(base, exp - 1);
