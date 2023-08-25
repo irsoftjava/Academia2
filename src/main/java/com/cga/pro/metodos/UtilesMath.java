@@ -5,13 +5,8 @@ public class UtilesMath {
     // esPrimo: Devuelve true si es primo, de lo contrario false
     // parámetros: Valor entero
     public boolean esPrimo(int n) {
-
         if (n == 0 || n == 1) return false;
-
-        for (int p = 2; p < n; p++) {
-            if (n % p == 0) return false;
-        }
-
+        for (int p = 2; p < n; p++) if (n % p == 0) return false;
         return true;
     }
 
@@ -20,10 +15,9 @@ public class UtilesMath {
     public int divisoresPrimos(int n) {
         int resp = 0;
 
-        for (int d = 1; d <= n; d++) {
+        for (int d = 1; d <= n; d++)
             if (n % d == 0 && esPrimo(d))
                 resp++;
-        }
         return resp;
     }
 
@@ -33,18 +27,16 @@ public class UtilesMath {
         double resultado = 0.0;
 
         switch (op) {
-            case '+': resultado = a + b; break;
-            case '-': resultado = a - b; break;
-            case '*': resultado = a * b; break;
-            case '/': {
+            case '+' -> resultado = a + b;
+            case '-' -> resultado = a - b;
+            case '*' -> resultado = a * b;
+            case '/' -> {
                 if (b == 0)
                     System.out.println("Lo sentimos, Divisor debe ser mayor que cero...");
                 else
                     resultado = a / b;
-                break;
             }
         }
-
         return resultado;
     }
 
@@ -52,9 +44,9 @@ public class UtilesMath {
     //              En caso de ser iguales, retorna 0.
     // parámetros: Valores enteros a y b
     public int maximoValor(int a, int b) {
-        if (a > b)
+        if (a > b) {
             return a;
-        else if (a < b)
+        } else if (a < b)
             return b;
         else return 0;
     }
@@ -77,10 +69,10 @@ public class UtilesMath {
     public double aLaN(double base, int exp) {
         double resp = 0;
 
-        if (exp == 0)
-            return 1.0;
-        else {
+        if (exp != 0) {
             resp = base * aLaN(base, exp - 1);
+        } else {
+            return 1.0;
         }
 
         return resp;
@@ -107,10 +99,11 @@ public class UtilesMath {
     public int enesimoTerminoFibonacci(int n) {
         int respuesta;
 
-        if (n == 0 || n == 1)
-            return n;
-        else
+        if (n != 0 && n != 1) {
             respuesta = enesimoTerminoFibonacci(n - 1) + enesimoTerminoFibonacci(n - 2);
+        } else {
+            return n;
+        }
 
         return respuesta;
     }
