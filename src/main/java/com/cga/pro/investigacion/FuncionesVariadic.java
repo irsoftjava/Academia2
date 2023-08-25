@@ -1,9 +1,5 @@
 package com.cga.pro.investigacion;
 
-import java.util.Arrays;
-
-import static java.util.Arrays.*;
-
 public class FuncionesVariadic {
 
     public static double sumar(Number... valores) {
@@ -42,6 +38,8 @@ public class FuncionesVariadic {
 
         double a = sumar(3.141596, 6.28, 1, 2, 3, 4, 5);
         System.out.println("Suma: " + a);
+
+        System.out.println();
 
         double b = sumar(1, 2, 3, 4.0, 5.5, 6.0, 7.0, 8.0);
         System.out.println("Suma: " + b);
