@@ -1,4 +1,4 @@
-package com.cga.pro;
+package com.cga.pro.investigacion;
 
 public class HolaMundo {
 
