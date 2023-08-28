@@ -1,14 +1,14 @@
 package com.cga.pro.arraylist;
 
 public class Cliente {
-    private String nombre;
-    private String apellidos;
-    private String dni;
-    private int edad;
-    private String calle;
-    private int numero;
-    private int cp;
-    private String provincia;
+    private final String nombre;
+    private final String apellidos;
+    private final String dni;
+    private final int edad;
+    private final String calle;
+    private final int numero;
+    private final int cp;
+    private final String provincia;
 
     public Cliente(String nombre, String apellidos, String dni, int edad, String calle, int numero, int cp, String provincia) {
         this.nombre = nombre;
@@ -20,5 +20,6 @@ public class Cliente {
         this.cp = cp;
         this.provincia = provincia;
     }
+
 
 }
