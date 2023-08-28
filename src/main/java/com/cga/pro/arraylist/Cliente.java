@@ -21,5 +21,10 @@ public class Cliente {
         this.provincia = provincia;
     }
 
-
+    @Override
+    public String toString() {
+        String msg = String.format("%s %s, %s, %d, %s, %d, %d, %s", this.nombre, this.apellidos, this.dni,
+                this.edad, this.calle, this.numero, this.cp, this.provincia);
+        return "Cliente(" + msg + ")";
+    }
 }
