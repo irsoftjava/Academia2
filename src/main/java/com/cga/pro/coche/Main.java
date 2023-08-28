@@ -1,6 +1,5 @@
-package com.cga.coche;
+package com.cga.pro.coche;
 
-import javax.xml.stream.StreamFilter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
