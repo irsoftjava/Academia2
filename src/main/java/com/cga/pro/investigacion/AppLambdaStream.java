@@ -5,11 +5,10 @@ import com.cga.pro.investigacion.lambda_stream.model.Product;
 
 import java.time.LocalDate;
 import java.time.Period;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Locale;
+import java.util.*;
 import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class AppLambdaStream {
 
@@ -91,5 +90,44 @@ public class AppLambdaStream {
         System.out.println();
 
         // Match (param: Predicate)
+        Predicate<Person> startWithPredicate = person -> person.getName().startsWith("J");
+        // anyMatch: No evalúa todo el stream, termina en la coincidencia. Devuelve un boolean.
+        boolean resp1 = persons.stream()
+                .anyMatch(startWithPredicate);
+        System.out.println(resp1);
+        System.out.println();
+
+        // allMatch: Evalúa todo el stream bajo la condición. Todos deben coincidir para que sea true.
+        boolean resp2 = persons.stream()
+                .allMatch(startWithPredicate);
+        System.out.println(resp2);
+        System.out.println();
+
+        // noneMatch: Evalúa todo el stream bajo la condición. Ninguno debe coincidir con la "J" para que sea true.
+        boolean resp3 = persons.stream()
+                .noneMatch(startWithPredicate);
+        System.out.println(resp3);
+        System.out.println();
+
+        // Limit / Skip
+        List<Person> list4 = persons.stream()
+                .skip(2)    // Salta los dos primeros
+                .collect(Collectors.toList());
+        AppLambdaStream.printList(list4);
+        System.out.println();
+        List<Person> list5 = persons.stream()
+                .limit(2)    // Se limita a dos primeros
+                .collect(Collectors.toList());
+        AppLambdaStream.printList(list5);
+        System.out.println();
+
+        // Collectors
+        // GroupBy
+        Map<Double, List<Product>> collect1 = products.stream()
+                .filter(p -> p.getPrice() > 20)
+                .collect(Collectors.groupingBy(Product::getPrice));
+        System.out.println(collect1);
+        
+        // Counting
     }
 }
