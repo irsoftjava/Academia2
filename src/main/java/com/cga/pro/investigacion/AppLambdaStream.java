@@ -37,11 +37,8 @@ public class AppLambdaStream {
         List<Product> products = Arrays.asList(pr1, pr2, pr3, pr4);
 
         // Lambdas // Method Reference
-        // for (int i = 0; i < persons.size(); i++) {
-        //    System.out.println(persons.get(i));
-        // }
         // for (Person p : persons) System.out.println(p);
-        persons.forEach(p -> System.out.println(p));
+        // persons.forEach(p -> System.out.println(p));
         persons.forEach(System.out::println);
         System.out.println();
 
