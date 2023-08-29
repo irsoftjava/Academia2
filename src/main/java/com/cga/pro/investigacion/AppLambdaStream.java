@@ -70,11 +70,25 @@ public class AppLambdaStream {
         System.out.println();
 
         // Sorted (param: Comparator)
+        //Comparator<Person> byNameAsc = Comparator.comparing(Person::getName);
         Comparator<Person> byNameAsc = (Person a, Person b) -> a.getName().compareTo(b.getName());
+        Comparator<Person> byNameDes = (Person a, Person b) -> b.getName().compareTo(a.getName());
+        Comparator<Person> byBirthDate = (Person a, Person b) -> a.getBirthDate().compareTo(b.getBirthDate());
         List<Person> orderedByNameAsc = persons.stream()
                 .sorted(byNameAsc)
                 .toList();
         AppLambdaStream.printList(orderedByNameAsc);
+        System.out.println();
+        List<Person> orderedByNameDes = persons.stream()
+                .sorted(byNameDes)
+                .toList();
+        AppLambdaStream.printList(orderedByNameDes);
+        System.out.println();
+        List<Person> orderedByBirthDate = persons.stream()
+                .sorted(byBirthDate)
+                .toList();
+        AppLambdaStream.printList(orderedByBirthDate);
+        System.out.println();
 
         // Match (param: Predicate)
     }
