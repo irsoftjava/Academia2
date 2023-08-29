@@ -37,11 +37,11 @@ public class AppLambdaStream {
         List<Product> products = Arrays.asList(pr1, pr2, pr3, pr4);
 
         // Lambdas // Method Reference
-//        for (int i = 0; i < persons.size(); i++) {
-//            System.out.println(persons.get(i));
-//        }
-//        for (Person p : persons) System.out.println(p);
-//        persons.forEach(p -> System.out.println(p));
+        // for (int i = 0; i < persons.size(); i++) {
+        //    System.out.println(persons.get(i));
+        // }
+        // for (Person p : persons) System.out.println(p);
+        persons.forEach(p -> System.out.println(p));
         persons.forEach(System.out::println);
         System.out.println();
 
@@ -127,7 +127,35 @@ public class AppLambdaStream {
                 .filter(p -> p.getPrice() > 20)
                 .collect(Collectors.groupingBy(Product::getPrice));
         System.out.println(collect1);
-        
+
         // Counting
+        Map<String, Long> collect2 = products.stream()
+                .collect(Collectors.groupingBy(
+                        Product::getName, Collectors.counting()
+                ));
+        System.out.println(collect2);
+        System.out.println();
+
+        // Agrupando por nombre producto y sumando
+        Map<String, Double> collect3 = products.stream()
+                .collect(Collectors.groupingBy(
+                        Product::getName, Collectors.summingDouble(Product::getPrice)
+                ));
+        System.out.println(collect3);
+
+        // Obteniendo suma y resumen
+        DoubleSummaryStatistics statistics = products.stream()
+                .collect(Collectors.summarizingDouble(Product::getPrice));
+        System.out.println(statistics);
+        System.out.println(statistics.getSum());
+        System.out.println();
+
+        // Reduce
+        Optional<Double> sum = products.stream()
+                .map(Product::getPrice)
+                //.reduce((a, b) -> a + b)
+                .reduce(Double::sum);
+        System.out.println(sum.get());
+        System.out.println();
     }
 }
