@@ -91,7 +91,7 @@ public class Aeropuerto {
         // int anio = fecha.get(Calendar.YEAR);
         int anioActual = Calendar.getInstance().get(Calendar.YEAR);
 
-        return anioActual - anioInauguracion;
+        return anioActual - this.anioInauguracion;
     }
 
     @Override
