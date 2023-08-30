@@ -76,6 +76,7 @@ public class AppLambdaStream {
                 .toList();
         AppLambdaStream.printList(orderedByNameAsc);
         System.out.println();
+
         List<Person> orderedByNameDes = persons.stream()
                 .sorted(byNameDes)
                 .toList();
