@@ -15,7 +15,7 @@ public class Ejercicio2 {
 
         ArrayList<String> palabras = new ArrayList<>();
 
-        palabras.add("numero");
+        palabras.add("número");
         palabras.add("valores");
         palabras.add("entero");
         palabras.add("introduzca");

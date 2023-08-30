@@ -13,7 +13,7 @@ public class Ejercicio1 {
         Scanner sc = new Scanner(System.in);
         ArrayList<Integer> numeros = new ArrayList<>();
         int numero;
-        int total = 0, cant = 0, media = 0;
+        int total = 0, cant = 0, media;
 
         do {
             System.out.print("Introduzca un número entero: ");
