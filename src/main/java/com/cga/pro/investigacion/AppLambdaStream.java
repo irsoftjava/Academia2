@@ -30,13 +30,13 @@ public class AppLambdaStream {
 
         Product pr1 = new Product(1, "Ceviche", 15.0);
         Product pr2 = new Product(2, "Chilaquiles", 25.50);
-        Product pr3 = new Product(3, "Bandeja Paisa", 35.50);
+        Product pr3 = new Product(3, "Bandeja Pisa", 35.50);
         Product pr4 = new Product(4, "Ceviche", 15.0);
 
         List<Person> persons = Arrays.asList(p1, p2, p3, p4, p5);
         List<Product> products = Arrays.asList(pr1, pr2, pr3, pr4);
 
-        // Lambdas // Method Reference
+        // Lambdas / Method Reference
         // for (Person p : persons) System.out.println(p);
         // persons.forEach(p -> System.out.println(p));
         persons.forEach(System.out::println);
@@ -56,6 +56,7 @@ public class AppLambdaStream {
                 .toList();
         AppLambdaStream.printList(agesList);
         System.out.println();
+
         Function<String, String> coderFunction = name -> "Coder: " + name.toUpperCase(Locale.ROOT);
         List<String> namesList = persons.stream()
                 //.map(p -> "Coder: " + p.getName().toUpperCase(Locale.ROOT))
@@ -66,7 +67,7 @@ public class AppLambdaStream {
         System.out.println();
 
         // Sorted (param: Comparator)
-        //Comparator<Person> byNameAsc = Comparator.comparing(Person::getName);
+        // Comparator<Person> byNameAsc = Comparator.comparing(Person::getName);
         Comparator<Person> byNameAsc = (Person a, Person b) -> a.getName().compareTo(b.getName());
         Comparator<Person> byNameDes = (Person a, Person b) -> b.getName().compareTo(a.getName());
         Comparator<Person> byBirthDate = (Person a, Person b) -> a.getBirthDate().compareTo(b.getBirthDate());
@@ -80,6 +81,7 @@ public class AppLambdaStream {
                 .toList();
         AppLambdaStream.printList(orderedByNameDes);
         System.out.println();
+
         List<Person> orderedByBirthDate = persons.stream()
                 .sorted(byBirthDate)
                 .toList();
