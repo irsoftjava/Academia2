@@ -1,5 +1,7 @@
 package com.cga.oop2;
 
+import java.time.LocalDate;
+
 public class AppAeropuerto {
 
     public static void main(String[] args) {
@@ -8,7 +10,9 @@ public class AppAeropuerto {
                 "Carretera del Norte", 210, "San Cristóbal de la Laguna",
                 1946, 876);
 
+
         System.out.println(ae1);
         System.out.println("El Aeropuerto, " + ae1.getNombre() + " tiene " + ae1.aniosAbierto() + " años abierto.");
+        System.out.println(LocalDate.now().getYear());
     }
 }

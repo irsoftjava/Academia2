@@ -1,6 +1,6 @@
 package com.cga.oop2;
 
-import java.util.Calendar;
+import java.time.LocalDate;
 
 public class Aeropuerto {
 
@@ -89,8 +89,8 @@ public class Aeropuerto {
     public Integer aniosAbierto() {
         // Calendar fecha = new GregorianCalendar();
         // int anio = fecha.get(Calendar.YEAR);
-        int anioActual = Calendar.getInstance().get(Calendar.YEAR);
-
+        // int anioActual = Calendar.getInstance().get(Calendar.YEAR);
+        int anioActual = LocalDate.now().getYear();
         return anioActual - this.anioInauguracion;
     }
 
