@@ -13,5 +13,17 @@ public class App {
 
         System.out.println("Avion #1: " + avion1);
         System.out.println("Avion #2: " + avion2);
+        System.out.println();
+
+        System.out.println("Avión #1");
+        System.out.println("Modelo: " + avion1.getModelo());
+        System.out.println("Número de Asientos: " + avion1.getNumAsientos());
+        System.out.println("Velocidad Máxima: " + avion1.getVelocidadMaxima());
+        System.out.println();
+
+        System.out.println("Avión #2");
+        System.out.println("Modelo: " + avion2.getModelo());
+        System.out.println("Número de Asientos: " + avion2.getNumAsientos());
+        System.out.println("Velocidad Máxima: " + avion2.getVelocidadMaxima());
     }
 }
