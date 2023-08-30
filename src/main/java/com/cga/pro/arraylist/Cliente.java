@@ -23,7 +23,7 @@ public class Cliente {
 
     @Override
     public String toString() {
-        String msg = String.format("%s %s, %s, %d, %s, %d, %d, %s", this.nombre, this.apellidos, this.dni,
+        String msg = String.format("%15s %15s, DNI: %9s, Edad: %3d, Calle: %20s, Nº %3d, CP: %5d, %15s", this.nombre, this.apellidos, this.dni,
                 this.edad, this.calle, this.numero, this.cp, this.provincia);
         return "Cliente(" + msg + ")";
     }
