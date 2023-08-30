@@ -9,6 +9,6 @@ public class AppAeropuerto {
                 1946, 876);
 
         System.out.println(ae1);
-        System.out.println("El Aeropuerto " + ae1.getNombre() + " tiene " + ae1.aniosAbierto() + " años abierto.");
+        System.out.println("El Aeropuerto, " + ae1.getNombre() + " tiene " + ae1.aniosAbierto() + " años abierto.");
     }
 }

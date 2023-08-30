@@ -1,7 +1,6 @@
 package com.cga.oop2;
 
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 public class Aeropuerto {
 
@@ -88,13 +87,11 @@ public class Aeropuerto {
     }
 
     public Integer aniosAbierto() {
-        int anios = 0;
+        // Calendar fecha = new GregorianCalendar();
+        // int anio = fecha.get(Calendar.YEAR);
+        int anioActual = Calendar.getInstance().get(Calendar.YEAR);
 
-        Calendar fecha = new GregorianCalendar();
-        int anio = fecha.get(Calendar.YEAR);
-        anios = anio - anioInauguracion;
-
-        return anios;
+        return anioActual - anioInauguracion;
     }
 
     @Override
