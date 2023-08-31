@@ -16,7 +16,7 @@ public class OptionAvion {
 
         do {
             do {
-                modeloAvion = (String) JOptionPane.showInputDialog(null, "Selecciona el modelo de Avión", "Aviones",
+                modeloAvion = (String) JOptionPane.showInputDialog(null, "Selecciona el Avion: ", "Aviones",
                         JOptionPane.PLAIN_MESSAGE, avion,
                         new Object[]{"AirBus A320", "AirBus A380-800", "Boeing 737", "Boeing 777", "Boeing 747"},
                         "Selecciona");
