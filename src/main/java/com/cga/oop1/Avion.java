@@ -48,10 +48,7 @@ public class Avion {
 
     @Override
     public String toString() {
-        return "Avion(" +
-                "modelo='" + modelo + '\'' +
-                ", numAsientos=" + numAsientos +
-                ", velocidadMaxima=" + velocidadMaxima +
-                ')';
+        return "El " + modelo + " tiene capacidad para " + numAsientos +
+                " asientos y vuela a una velocidad de " + velocidadMaxima + " km/h.";
     }
 }

@@ -49,5 +49,14 @@ public class OptionAvion {
             }
 
         } while (!isOK);
+
+        if (preg == 3) {
+            Avion miAvion = new Avion(modeloAvion, numeroDeAsientos, velocidadMaxima);
+
+            JOptionPane.showMessageDialog(null, miAvion.toString(),
+                    modeloAvion, JOptionPane.INFORMATION_MESSAGE, avion);
+
+            System.out.println(miAvion);
+        }
     }
 }
