@@ -29,7 +29,6 @@ public class OptionPane {
         System.out.println("La opción seleccionada fue la " + opcion);
         */
 
-        String[] opciones = {"Si", "No", "Cancelar"};
         ImageIcon icon3 = new ImageIcon("./src/main/java/com/cga/pro/investigacion/swing/cafe.png");
         int salida = JOptionPane.showConfirmDialog(null, "Te gustan los tacos?", "Elige...", JOptionPane.YES_NO_CANCEL_OPTION,
                 JOptionPane.WARNING_MESSAGE, icon3);
