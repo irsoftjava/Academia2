@@ -22,11 +22,11 @@ public class OptionAeropuerto {
                             "Aeropuerto Internacional de La Palma", "Aeropuerto de Gran Canaria", "Aeropuerto La Gomera"}, "Selecciona");
             if (nombreAeropuerto != null && !nombreAeropuerto.isEmpty()) preg++; else { preg = 5; break; }
 
-            pais = (String) JOptionPane.showInputDialog(null, "Introduzca el Pais del Aeropuerto ",  nombreAeropuerto,
+            pais = JOptionPane.showInputDialog(null, "Introduzca el Pais del Aeropuerto ",  nombreAeropuerto,
                     JOptionPane.PLAIN_MESSAGE);
             if (pais != null ) preg++; else { preg = 5; break; }
 
-            calle = (String) JOptionPane.showInputDialog(null, "Introduzca la calle del Aeropuerto ", nombreAeropuerto,
+            calle = JOptionPane.showInputDialog(null, "Introduzca la calle del Aeropuerto ", nombreAeropuerto,
                     JOptionPane.PLAIN_MESSAGE);
             if (calle != null ) preg++; else { preg = 5; break; }
 
