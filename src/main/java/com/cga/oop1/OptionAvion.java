@@ -8,9 +8,9 @@ public class OptionAvion {
 
         ImageIcon avion = new ImageIcon("./src/main/java/com/cga/oop1/avion.png");
         ImageIcon error = new ImageIcon("./src/main/java/com/cga/oop1/error.png");
-        String modeloAvion = "";
-        Integer numeroDeAsientos = 0;
-        Double velocidadMaxima = 0.0;
+        String modeloAvion;
+        int numeroDeAsientos = 0;
+        double velocidadMaxima = 0.0;
         int preg = 0;
         boolean isOK = false;
 
@@ -20,8 +20,8 @@ public class OptionAvion {
                         JOptionPane.PLAIN_MESSAGE, avion,
                         new Object[]{"AirBus A320", "AirBus A380-800", "Boeing 737", "Boeing 777", "Boeing 747"},
                         "Selecciona");
-                if (modeloAvion != null && modeloAvion != "") preg++; else { isOK = true; break; }
-            } while (preg != 1);
+                if (modeloAvion != null && !modeloAvion.isEmpty()) preg++; else { isOK = true; break; }
+            } while (!(1 == preg));
 
             if (!isOK) {
                 do {
