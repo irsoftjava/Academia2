@@ -16,7 +16,24 @@ public class OptionPane {
         //String name = JOptionPane.showInputDialog("What is your name?");
         // System.out.println(name);
 
+        /*
+        String[] responses = {"No, you're awesome!", "Thank you", "*Blush*"};
+        ImageIcon icon = new ImageIcon("./src/main/java/com/cga/pro/investigacion/swing/carita.png");
         JOptionPane.showOptionDialog(null, "You are awesome!", "Secret Message", JOptionPane.YES_NO_CANCEL_OPTION,
-                JOptionPane.INFORMATION_MESSAGE, null, null, 0);
+                JOptionPane.INFORMATION_MESSAGE, icon, responses, 0);
+
+        ImageIcon icon2 = new ImageIcon("./src/main/java/com/cga/pro/investigacion/swing/carita2.png");
+        String[] arreglo = {"Monitor", "Teclado", "Mouse"};
+        int opcion = JOptionPane.showOptionDialog(null, "Elije una palabra", "Elije...", 0, JOptionPane.QUESTION_MESSAGE,
+                icon2, arreglo, "Monitor" );
+        System.out.println("La opción seleccionada fue la " + opcion);
+        */
+
+        String[] opciones = {"Si", "No", "Cancelar"};
+        ImageIcon icon3 = new ImageIcon("./src/main/java/com/cga/pro/investigacion/swing/cafe.png");
+        int salida = JOptionPane.showConfirmDialog(null, "Te gustan los tacos?", "Elige...", JOptionPane.YES_NO_CANCEL_OPTION,
+                JOptionPane.WARNING_MESSAGE, icon3);
+        System.out.println(salida);
+
     }
 }
