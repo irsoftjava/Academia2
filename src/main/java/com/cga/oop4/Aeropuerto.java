@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Aeropuerto {
 
     // Constantes
-    private final int MAX_AVIONES = 3;
+    private final int MAX_AVIONES = 5;
     private int avionNumero = 0;
 
     // Atributos
