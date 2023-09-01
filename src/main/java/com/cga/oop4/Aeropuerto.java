@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Aeropuerto {
 
     // Constantes
-    private final int MAX_AVIONES = 5;
+    private final int MAX_AVIONES = 3;
     private int avionNumero = 0;
 
     // Atributos
@@ -68,6 +68,9 @@ public class Aeropuerto {
         this.capacidad = capacidad;
     }
 
+    public int getNumeroDeAviones() {
+        return avionNumero;
+    }
     public Integer aniosAbierto() {
         // Calendar fecha = new GregorianCalendar();
         // int anio = fecha.get(Calendar.YEAR);
@@ -77,12 +80,12 @@ public class Aeropuerto {
     }
 
     public void agregarAvion(Avion a) {
-        if (avionNumero < MAX_AVIONES) {
+        if (this.getNumeroDeAviones() < MAX_AVIONES) {
             aviones[avionNumero] = a;
             avionNumero++;
         } else {
             System.out.println();
-            System.out.println("Ya no se puede agregar mas aviones, ha llegado a su máximo.");
+            System.out.printf("Ya no se puede agregar mas Aviones, el máximo es %d\n", MAX_AVIONES);
         }
     }
 
