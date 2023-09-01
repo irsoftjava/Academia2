@@ -8,11 +8,10 @@ public class Direccion {
     private int numero;
     private String ciudad;
 
-    // Constructor vacio
+    // Constructor vacío
     public Direccion() {
     }
 
-    ;
 
     // Constructor parametrizado
     public Direccion(String pais, String calle, int numero, String ciudad) {
@@ -54,7 +53,7 @@ public class Direccion {
     public void setCiudad(String ciudad) {
         this.ciudad = ciudad;
     }
-
+/*
     @Override
     public String toString() {
         return "Direccion(" +
@@ -64,4 +63,6 @@ public class Direccion {
                 ", ciudad='" + ciudad + '\'' +
                 ')';
     }
+
+ */
 }

@@ -6,7 +6,7 @@ public class Aeropuerto {
 
     // Atributos
     private String nombre;
-    private Direccion direccion;
+    private Direccion dir;
     private Integer anioInauguracion;
     private Integer capacidad;
 
@@ -15,18 +15,15 @@ public class Aeropuerto {
     }
 
     // Constructor parametrizado
-
     public Aeropuerto(String nombre, String pais, String calle, int numero, String ciudad, Integer anioInauguracion, Integer capacidad) {
         this.nombre = nombre;
-        this.direccion = new Direccion(pais, calle, numero, ciudad);
+        this.dir = new Direccion(pais, calle, numero, ciudad);
         this.anioInauguracion = anioInauguracion;
         this.capacidad = capacidad;
     }
 
 
     // Métodos
-
-
     public String getNombre() {
         return nombre;
     }
@@ -35,12 +32,12 @@ public class Aeropuerto {
         this.nombre = nombre;
     }
 
-    public Direccion getDireccion() {
-        return direccion;
+    public Direccion getDir() {
+        return dir;
     }
 
-    public void setDireccion(Direccion direccion) {
-        this.direccion = direccion;
+    public void setDir(Direccion dir) {
+        this.dir = dir;
     }
 
     public Integer getAnioInauguracion() {
@@ -66,12 +63,12 @@ public class Aeropuerto {
         int anioActual = LocalDate.now().getYear();
         return anioActual - this.anioInauguracion;
     }
-/*
+
     @Override
     public String toString() {
-        return  "El Aeropuerto " + nombre + " se encuentra en " + pais + " en calle " + calle +
-                " número " + numero + " en la Ciudad de " + ciudad + ". \nFue Inaugurado en el año " + anioInauguracion +
+        return "El Aeropuerto " + nombre + " se encuentra en " + dir.getPais() + " en calle " + dir.getCalle() +
+                " número " + dir.getNumero() + " en la Ciudad de " + dir.getCiudad() + ". \nFue Inaugurado en el año " + anioInauguracion +
                 " y cuenta con una Capacidad de " + capacidad + " personas. Lleva abierto " + this.aniosAbierto() + " años.";
 
-    }*/
+    }
 }
