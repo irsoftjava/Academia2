@@ -73,7 +73,7 @@ public class Aeropuerto {
 
     @Override
     public String toString() {
-        return "El Aeropuerto " + nombre + " se encuentra en " + dir.getPais() + " en calle " + dir.getCalle() +
+        return "El " + nombre + " se encuentra en " + dir.getPais() + " en calle " + dir.getCalle() +
                 " número " + dir.getNumero() + " en la Ciudad de " + dir.getCiudad() + ". \nFue Inaugurado en el año " + anioInauguracion +
                 " y cuenta con una Capacidad de " + capacidad + " personas. Lleva abierto " + this.aniosAbierto() + " años.";
 
