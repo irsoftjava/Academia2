@@ -6,8 +6,13 @@ public class DireccionPrueba {
 
         Direccion direc = new Direccion("España", "Franco de Medina", 41, "La Cuesta");
 
-        Aeropuerto aeropuerto = new Aeropuerto("Reina Sofia", direc, 1956, 880);
+        Aeropuerto aero1 = new Aeropuerto("Reina Sofia", direc, 1956, 880);
+        Aeropuerto aero2 = new Aeropuerto("Reina Sofia", "España", "Franco de Medina",
+                41, "La Cuesta", 1956, 880);
 
-        System.out.println(aeropuerto);
+        System.out.println();
+        System.out.println(aero1);
+        System.out.println();
+        System.out.println(aero2);
     }
 }
