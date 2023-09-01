@@ -14,6 +14,13 @@ public class Aeropuerto {
     public Aeropuerto() {
     }
 
+    public Aeropuerto(String nombre, Direccion dir, Integer anioInauguracion, Integer capacidad) {
+        this.nombre = nombre;
+        this.dir = dir;
+        this.anioInauguracion = anioInauguracion;
+        this.capacidad = capacidad;
+    }
+
     // Constructor parametrizado
     public Aeropuerto(String nombre, String pais, String calle, int numero, String ciudad, Integer anioInauguracion, Integer capacidad) {
         this.nombre = nombre;
