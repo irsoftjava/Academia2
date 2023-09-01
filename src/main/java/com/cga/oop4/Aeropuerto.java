@@ -15,8 +15,13 @@ public class Aeropuerto {
     private Integer anioInauguracion;
     private Integer capacidad;
 
-    // Constructor vacío
-    public Aeropuerto() {
+
+    // Constructores parametrizados
+    public Aeropuerto(String nombre, String pais, String calle, int numero, String ciudad, Integer anioInauguracion, Integer capacidad) {
+        this.nombre = nombre;
+        this.dir = new Direccion(pais, calle, numero, ciudad);
+        this.anioInauguracion = anioInauguracion;
+        this.capacidad = capacidad;
     }
 
     public Aeropuerto(String nombre, Direccion dir, Integer anioInauguracion, Integer capacidad) {
@@ -26,55 +31,16 @@ public class Aeropuerto {
         this.capacidad = capacidad;
     }
 
-    // Constructor parametrizado
-    public Aeropuerto(String nombre, String pais, String calle, int numero, String ciudad, Integer anioInauguracion, Integer capacidad) {
-        this.nombre = nombre;
-        this.dir = new Direccion(pais, calle, numero, ciudad);
-        this.anioInauguracion = anioInauguracion;
-        this.capacidad = capacidad;
-    }
-
-
     // Métodos
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public Direccion getDir() {
-        return dir;
-    }
-
-    public void setDir(Direccion dir) {
-        this.dir = dir;
-    }
-
-    public Integer getAnioInauguracion() {
-        return anioInauguracion;
-    }
-
-    public void setAnioInauguracion(Integer anioInauguracion) {
-        this.anioInauguracion = anioInauguracion;
-    }
-
-    public Integer getCapacidad() {
-        return capacidad;
-    }
-
-    public void setCapacidad(Integer capacidad) {
-        this.capacidad = capacidad;
-    }
-
     public int getNumeroDeAviones() {
         return avionNumero;
     }
     public Integer aniosAbierto() {
-        // Calendar fecha = new GregorianCalendar();
-        // int anio = fecha.get(Calendar.YEAR);
-        // int anioActual = Calendar.getInstance().get(Calendar.YEAR);
+        /*
+         Calendar fecha = new GregorianCalendar();
+         int anio = fecha.get(Calendar.YEAR);
+         int anioActual = Calendar.getInstance().get(Calendar.YEAR);
+        */
         int anioActual = LocalDate.now().getYear();
         return anioActual - this.anioInauguracion;
     }
