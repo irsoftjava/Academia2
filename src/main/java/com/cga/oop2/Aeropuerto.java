@@ -96,14 +96,8 @@ public class Aeropuerto {
 
     @Override
     public String toString() {
-        return "Aeropuerto(" +
-                "nombre='" + nombre + '\'' +
-                ", pais='" + pais + '\'' +
-                ", calle='" + calle + '\'' +
-                ", numero=" + numero +
-                ", ciudad='" + ciudad + '\'' +
-                ", anioInauguracion=" + anioInauguracion +
-                ", capacidad=" + capacidad +
-                ')';
+        return  "El Aeropuerto " + nombre + " se encuentra en " + pais + " en calle " + calle +
+                " número " + numero + " en la Ciudad de " + ciudad + ". \nFue Inaugurado en el año " + anioInauguracion +
+                " y cuenta con una Capacidad de " + capacidad + " personas. Lleva abierto " + this.aniosAbierto() + " años.";
     }
 }
