@@ -8,7 +8,7 @@ public class OptionAeropuerto {
 
         ImageIcon aeropuerto = new ImageIcon("./src/main/java/com/cga/oop2/AirPort.png");
         ImageIcon error = new ImageIcon("./src/main/java/com/cga/oop2/error.png");
-        String nombreAeropuerto = "";
+        String nombreAeropuerto;
         String pais = "";
         String calle = "";
         int numero = 0;
