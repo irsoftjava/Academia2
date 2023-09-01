@@ -51,7 +51,7 @@ public class Aeropuerto {
             avionNumero++;
         } else {
             System.out.println();
-            System.out.printf("Ya no se puede agregar mas Aviones, el máximo es %d\n", MAX_AVIONES);
+            System.out.printf("ERROR: Ya no se puede agregar mas Aviones, el máximo es %d\n", MAX_AVIONES);
         }
     }
 
