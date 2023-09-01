@@ -19,6 +19,10 @@ public class AsociacionPrueba {
         Aeropuerto ae2 = new Aeropuerto("Aeropuerto Norte", "España", "Carretera del Norte",
                 41, "La Laguna", 1946, 850);
 
+        System.out.println();
+        System.out.println(ae1);
+        System.out.println();
+        System.out.println(ae2);
 
         ae1.agregarAvion(av1);
         ae1.agregarAvion(av2);
