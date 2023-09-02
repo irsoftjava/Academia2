@@ -14,16 +14,13 @@ public class FuncAnonimas {
     public static void main(String[] args) {
 
         List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18);
-
-        // Encontrar los números pares y guardarlos en un ArrayList
         List<Integer> resultados = new ArrayList<>();
 
         // De forma Imperativa
         /*
-        for (int i = 0; i < numeros.size(); i++) {
+        for (int i = 0; i < numeros.size(); i++)
             if (numeros.get(i) % 2 == 0)
                 resultados.add(numeros.get(i));
-        }
         */
 
         // De forma Funcional
