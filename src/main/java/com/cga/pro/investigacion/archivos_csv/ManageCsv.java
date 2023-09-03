@@ -10,7 +10,7 @@ public class ManageCsv {
 
     private BufferedReader br;
     private String row;
-    private List<String> pars = new ArrayList<>();
+    private final List<String> pars = new ArrayList<>();
 
     public List<String> readFile(String name) {
         try {
