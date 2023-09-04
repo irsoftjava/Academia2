@@ -1,7 +1,6 @@
 package com.cga.pro.metodos;
 
 import java.util.InputMismatchException;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Ejercicio9 {

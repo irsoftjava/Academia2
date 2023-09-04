@@ -1,8 +1,6 @@
 package com.cga.pro.arrays;
 
-import java.util.Arrays;
 import java.util.InputMismatchException;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Ejercicio2 {
