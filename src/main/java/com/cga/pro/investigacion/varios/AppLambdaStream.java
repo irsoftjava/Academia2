@@ -1,4 +1,4 @@
-package com.cga.pro.investigacion;
+package com.cga.pro.investigacion.varios;
 
 import com.cga.pro.investigacion.lambda_stream.model.Person;
 import com.cga.pro.investigacion.lambda_stream.model.Product;

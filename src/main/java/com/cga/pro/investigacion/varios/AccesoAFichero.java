@@ -1,4 +1,4 @@
-package com.cga.pro.investigacion;
+package com.cga.pro.investigacion.varios;
 
 import java.io.FileReader;
 import java.io.IOException;
