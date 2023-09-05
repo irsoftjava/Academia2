@@ -1,6 +1,5 @@
 package com.cga.pro.investigacion.loteria;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /*
@@ -30,7 +29,7 @@ import java.util.List;
 
 public class AppLoteria {
 
-    List<Integer, List<Integer>> apuestas = new ArrayList<ArrayList<>>();
+    //List<Integer, List<Integer>> apuestas = new ArrayList<ArrayList<>>();
     public static void main(String[] args) {
 
         Loteria loteria = new Loteria();
