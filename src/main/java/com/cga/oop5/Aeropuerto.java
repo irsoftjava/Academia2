@@ -1,10 +1,8 @@
-package com.cga.oop4;
+package com.cga.oop5;
 
 import java.time.LocalDate;
 
 public class Aeropuerto {
-
-    static int id_autoenumerado = 0;
 
     // Constantes
     private final int MAX_AVIONES = 5;
@@ -24,7 +22,6 @@ public class Aeropuerto {
         this.dir = new Direccion(pais, calle, numero, ciudad);
         this.anioInauguracion = anioInauguracion;
         this.capacidad = capacidad;
-        id_autoenumerado++;
     }
 
     public Aeropuerto(String nombre, Direccion dir, Integer anioInauguracion, Integer capacidad) {
@@ -32,13 +29,13 @@ public class Aeropuerto {
         this.dir = dir;
         this.anioInauguracion = anioInauguracion;
         this.capacidad = capacidad;
-        id_autoenumerado++;
     }
 
     // Métodos
     public int getNumeroDeAviones() {
         return avionNumero;
     }
+
     public Integer aniosAbierto() {
         /*
          Calendar fecha = new GregorianCalendar();

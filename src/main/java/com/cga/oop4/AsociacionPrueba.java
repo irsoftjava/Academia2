@@ -32,5 +32,7 @@ public class AsociacionPrueba {
 
         System.out.println();
         ae1.mostrarAviones();
+
+        System.out.printf("Hay %d clases Aeropuerto instanciadas.", Aeropuerto.id_autoenumerado);
     }
 }
