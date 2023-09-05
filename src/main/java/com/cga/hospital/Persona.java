@@ -6,6 +6,12 @@ public class Persona {
     private String dni;
     private Direccion direccion;
 
+    public Persona(int id, String nombre, String dni, Direccion direccion) {
+        this.id = id;
+        this.nombre = nombre;
+        this.dni = dni;
+        this.direccion = direccion;
+    }
 
     public int getId() {
         return id;
