@@ -5,7 +5,10 @@ public class PersonalSanitario extends Persona {
     private Especialidad especialidad;
     private Ambito ambito;
 
-    // Constructor vacío
+    /**
+     * Constructor para PersonalSanitario:
+     * Es todo aquel personal que trabaja directamente en el ambito sanitario.
+     */
     public PersonalSanitario(Especialidad especialidad, Ambito ambito,
                              int id, String nombre, String dni, Direccion direccion) {
         //super.setId(id);

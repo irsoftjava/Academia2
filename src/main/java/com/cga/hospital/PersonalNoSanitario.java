@@ -5,6 +5,10 @@ public class PersonalNoSanitario extends Persona {
     private Oficio oficio;
     private Ambito ambito;
 
+    /**
+     * Constructor para PersonalNoSanitario:
+     * Es todo aquel personal que trabaja en un ambito distinto al sanitario.
+     */
     public PersonalNoSanitario(Oficio oficio, Ambito ambito,
                                int id, String nombre, String dni, Direccion direccion) {
         super(id, nombre, dni, direccion);
