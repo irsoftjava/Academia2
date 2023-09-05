@@ -4,13 +4,14 @@ import java.time.LocalDate;
 
 public class Aeropuerto {
 
-    static int id_autoenumerado = 0;
+    private static int id_autoenumerado = 0;
 
     // Constantes
     private final int MAX_AVIONES = 5;
     private int avionNumero = 0;
 
     // Atributos
+    private int id;
     private String nombre;
     private Direccion dir;
     private Avion[] aviones = new Avion[MAX_AVIONES];
@@ -24,7 +25,7 @@ public class Aeropuerto {
         this.dir = new Direccion(pais, calle, numero, ciudad);
         this.anioInauguracion = anioInauguracion;
         this.capacidad = capacidad;
-        id_autoenumerado++;
+        this.id = ++id_autoenumerado;
     }
 
     public Aeropuerto(String nombre, Direccion dir, Integer anioInauguracion, Integer capacidad) {
@@ -32,7 +33,7 @@ public class Aeropuerto {
         this.dir = dir;
         this.anioInauguracion = anioInauguracion;
         this.capacidad = capacidad;
-        id_autoenumerado++;
+        this.id = ++id_autoenumerado;
     }
 
     // Métodos
@@ -67,7 +68,7 @@ public class Aeropuerto {
 
     @Override
     public String toString() {
-        return "El " + nombre + " se encuentra en " + dir.getPais() + " en calle " + dir.getCalle() +
+        return "El Aeropuerto con ID: " + id + " " + nombre + " se encuentra en " + dir.getPais() + " en calle " + dir.getCalle() +
                 " número " + dir.getNumero() + " en la Ciudad de " + dir.getCiudad() + ". \nFue Inaugurado en el año " + anioInauguracion +
                 " y cuenta con una Capacidad de " + capacidad + " personas. Lleva abierto " + this.aniosAbierto() + " años.";
 
