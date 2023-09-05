@@ -53,7 +53,7 @@ public class Direccion {
     public void setCiudad(String ciudad) {
         this.ciudad = ciudad;
     }
-/*
+
     @Override
     public String toString() {
         return "Direccion(" +
@@ -63,6 +63,4 @@ public class Direccion {
                 ", ciudad='" + ciudad + '\'' +
                 ')';
     }
-
- */
 }
