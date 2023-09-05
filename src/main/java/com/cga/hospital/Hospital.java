@@ -29,6 +29,7 @@ public class Hospital {
 
     @Override
     public String toString() {
+        System.out.println();
         return "Hospital: " + this.nombre + " Dirección: " + this.direccion;
     }
 }
