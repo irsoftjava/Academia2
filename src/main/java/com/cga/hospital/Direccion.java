@@ -10,4 +10,8 @@ public class Direccion {
         this.numero = numero;
     }
 
+    @Override
+    public String toString() {
+        return this.calle + " #" + this.numero;
+    }
 }

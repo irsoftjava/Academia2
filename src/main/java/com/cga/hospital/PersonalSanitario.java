@@ -6,7 +6,20 @@ public class PersonalSanitario extends Persona {
     private Ambito ambito;
 
     // Constructor vacío
-    public PersonalSanitario() {
+    public PersonalSanitario(Especialidad especialidad, Ambito ambito,
+                             int id, String nombre, String dni, Direccion direccion) {
+        super.setId(id);
+        super.setNombre(nombre);
+        super.setDni(dni);
+        super.setDireccion(direccion);
+        this.especialidad = especialidad;
+        this.ambito = ambito;
+    }
 
+    @Override
+    public String toString() {
+        return "ID: " + super.getId() + " Nombre: " + super.getNombre() + " con DNI: " +
+                super.getDni() + " Domicilio: " + super.getDireccion() +
+                "\nEspecialidad: " + this.especialidad + " y es trabajador " + this.ambito;
     }
 }
