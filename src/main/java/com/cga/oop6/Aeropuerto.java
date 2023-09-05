@@ -31,6 +31,9 @@ public class Aeropuerto {
         this.capacidad = capacidad;
     }
 
+    public Aeropuerto() {
+    }
+
     // Métodos
     public int getNumeroDeAviones() {
         return avionNumero;
