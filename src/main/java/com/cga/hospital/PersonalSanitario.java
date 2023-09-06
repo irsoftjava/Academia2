@@ -6,13 +6,18 @@ public class PersonalSanitario extends Persona {
     private Ambito ambito;
 
     /**
-     * Constructor para PersonalSanitario:
+     * Constructor para PersonalSanitario: Es toda aquella persona que trabaja directamente en el ambito sanitario.
      *
-     * <p>Es todo aquel personal que trabaja directamente en el ambito sanitario.
-     *
-     * @param especialidad  - Esecialidad de la Persona
-     * @param ambito        - Ambito al que pertenece (INTERNO, EXTERNO)
-     *
+     * @param especialidad  esecialidad de la Persona, de tipo enum Especialidad
+     * @param ambito        ambito al que pertenece la Persona, de tipo enum Ambito
+     * @param id id de la Persona, de tipo int
+     * @param nombre nombre de la Persona, de tipo String
+     * @param dni dni de la Persona, de tipo String
+     * @param direccion direccion de la Persona de tipo Direccion
+     * @see Persona
+     * @see Direccion
+     * @see Especialidad
+     * @see Ambito
      *
      * @author Iván Rodriguez Saiz.
      */

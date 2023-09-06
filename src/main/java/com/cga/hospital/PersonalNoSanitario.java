@@ -17,6 +17,10 @@ public class PersonalNoSanitario extends Persona {
      * @param direccion direccion de la Persona de tipo Direccion
      * @see Persona
      * @see Direccion
+     * @see Oficio
+     * @see Ambito
+     *
+     * @author Ivan Rodriguez Saiz
      */
     public PersonalNoSanitario(Oficio oficio, Ambito ambito,
                                int id, String nombre, String dni, Direccion direccion) {
