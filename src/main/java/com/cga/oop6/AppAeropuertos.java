@@ -9,6 +9,7 @@ public class AppAeropuertos {
         Direccion dir2 = new Direccion("España", "Carretera Sur", 33, "Granadilla");
 
 
+        // Creamos un Aeropuerto Público ap1 y un Aeropuerto Privado ap2
         AeropuertoPublico ap1 = new AeropuertoPublico(105000.25, 10,
                 "Tenerife Norte Ciudad de la Laguna", dir1, 1965, 890);
 
