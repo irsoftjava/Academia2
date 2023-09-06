@@ -7,7 +7,16 @@ public class PersonalNoSanitario extends Persona {
 
     /**
      * Constructor para PersonalNoSanitario:
-     * Es todo aquel personal que trabaja en un ambito distinto al sanitario.
+     * Es toda aquella persona que trabaja en un ambito distinto al sanitario.
+     *
+     * @param oficio oficio de la Persona, de tipo enum Oficio
+     * @param ambito ambito en el que trabaja, de tipo enum Ambito
+     * @param id id de la Persona, de tipo int
+     * @param nombre nombre de la Persona, de tipo String
+     * @param dni dni de la Persona, de tipo String
+     * @param direccion direccion de la Persona de tipo Direccion
+     * @see Persona
+     * @see Direccion
      */
     public PersonalNoSanitario(Oficio oficio, Ambito ambito,
                                int id, String nombre, String dni, Direccion direccion) {
