@@ -5,9 +5,9 @@ package com.cga.pro.investigacion.compareTo;
  */
 public class Alumno implements Comparable<Alumno> {
 
-    private String nombre;
-    private float calificacion;
-    private int edad;
+    private final String nombre;
+    private final float calificacion;
+    private final int edad;
 
     public Alumno(String nombre, float calificacion, int edad) {
         this.nombre = nombre;
