@@ -1,4 +1,4 @@
-package com.cga.oop8;
+package com.cga.oop8.abstracto;
 
 public abstract class Figura {
 

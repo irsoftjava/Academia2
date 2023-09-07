@@ -1,6 +1,6 @@
-package com.cga.oop8;
+package com.cga.oop8.interfaz;
 
-public class Elipse extends Figura {
+public class Elipse implements Figura {
 
     private double ejeUno;
     private double ejeDos;
@@ -47,7 +47,5 @@ public class Elipse extends Figura {
     public double perimetro() {
         //[2×π×Sqrt((r1² + r2²)/2) ]
         return 2 * Math.PI * (Math.sqrt((Math.pow(this.ejeUno, 2) + Math.pow(this.ejeDos, 2))) / 2);
-        //return (Math.PI * (3 (ejeUno + ejeDos))
-        //- (Math.sqrt((3 *))))
     }
 }
