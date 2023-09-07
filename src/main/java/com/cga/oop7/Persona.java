@@ -12,10 +12,9 @@ public abstract class Persona {
         this.sueldo = sueldo;
     }
 
-    public abstract double incrementoDeSueldo();
+    public abstract double incrementoDeSueldo(double aumento);
 
     // Métodos
-
     public String getNombre() {
         return nombre;
     }
@@ -27,7 +26,6 @@ public abstract class Persona {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
     public void setSueldo(double sueldo) {
         this.sueldo = sueldo;
     }

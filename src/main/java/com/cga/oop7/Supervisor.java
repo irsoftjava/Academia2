@@ -9,7 +9,8 @@ public class Supervisor extends Persona {
 
     // Métodos
     @Override
-    public double incrementoDeSueldo() {
-        return this.getSueldo() * 1.25;
+    public double incrementoDeSueldo(double aumento) {
+        return this.getSueldo() + (this.getSueldo() * (aumento / 100));
     }
+
 }

@@ -7,7 +7,7 @@ public class Empleado extends Persona {
     }
 
     @Override
-    public double incrementoDeSueldo() {
-        return this.getSueldo() * 4.30;
+    public double incrementoDeSueldo(double aumento) {
+        return this.getSueldo() + (this.getSueldo() * (aumento / 100));
     }
 }
