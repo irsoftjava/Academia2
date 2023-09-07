@@ -22,6 +22,7 @@ public class PersonalNoSanitario extends Persona {
      *
      * @author Ivan Rodriguez Saiz
      */
+
     public PersonalNoSanitario(Oficio oficio, Ambito ambito,
                                int id, String nombre, String dni, Direccion direccion) {
         super(id, nombre, dni, direccion);
