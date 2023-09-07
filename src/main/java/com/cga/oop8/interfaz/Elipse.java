@@ -46,6 +46,8 @@ public class Elipse implements Figura {
     @Override
     public double perimetro() {
         //[2×π×Sqrt((r1² + r2²)/2) ]
-        return 2 * Math.PI * (Math.sqrt((Math.pow(this.ejeUno, 2) + Math.pow(this.ejeDos, 2))) / 2);
+        //return 2 * Math.PI * (Math.sqrt(((Math.pow(this.ejeUno, 2) + Math.pow(this.ejeDos, 2))) / 2));
+        return (Math.PI * (3 * (this.ejeUno + this.ejeDos))
+                - (Math.sqrt((3 * this.ejeUno + this.ejeDos))));
     }
 }
