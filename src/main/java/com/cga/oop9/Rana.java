@@ -5,6 +5,18 @@ public class Rana extends Anfibio implements Animal {
     private String especie;
     private boolean venenosa;
 
+    //    public Rana(String especie, boolean venenosa) {
+//        this.especie = especie;
+//        this.venenosa = venenosa;
+//    }
+    public Rana() {
+    }
+
+    public Rana(double tamanio, double peso, String color, String especie, boolean venenosa) {
+        super(tamanio, peso, color);
+        this.especie = especie;
+        this.venenosa = venenosa;
+    }
 
     @Override
     public void cazar() {
