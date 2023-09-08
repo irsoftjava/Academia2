@@ -18,23 +18,40 @@ public class Rana extends Anfibio implements Animal {
         this.venenosa = venenosa;
     }
 
-    @Override
-    public void cazar() {
-        System.out.println("Estoy Cazando..");
+    public String getEspecie() {
+        return especie;
     }
 
-    @Override
-    public void perseguir() {
-        System.out.println("Te estoy persiguiendo.");
+    public void setEspecie(String especie) {
+        this.especie = especie;
     }
 
-    @Override
-    public void observar() {
-        System.out.println("Te estoy observando.");
+    public boolean isVenenosa() {
+        return venenosa;
     }
 
-    @Override
-    public void huir() {
-        System.out.println("Corre que te como....");
+    public void setVenenosa(boolean venenosa) {
+        this.venenosa = venenosa;
     }
+
+    //
+//    @Override
+//    public void cazar() {
+//        System.out.println("Estoy Cazando..");
+//    }
+//
+//    @Override
+//    public void perseguir() {
+//        System.out.println("Te estoy persiguiendo.");
+//    }
+//
+//    @Override
+//    public void observar() {
+//        System.out.println("Te estoy observando.");
+//    }
+//
+//    @Override
+//    public void huir() {
+//        System.out.println("Corre que te como....");
+//    }
 }
