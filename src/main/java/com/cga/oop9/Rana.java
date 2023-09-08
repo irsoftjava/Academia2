@@ -34,6 +34,7 @@ public class Rana extends Anfibio implements Animal {
         this.venenosa = venenosa;
     }
 
+
     //
 //    @Override
 //    public void cazar() {
