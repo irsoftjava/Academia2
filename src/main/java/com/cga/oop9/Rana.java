@@ -5,10 +5,7 @@ public class Rana extends Anfibio implements Animal {
     private String especie;
     private boolean venenosa;
 
-    //    public Rana(String especie, boolean venenosa) {
-//        this.especie = especie;
-//        this.venenosa = venenosa;
-//    }
+
     public Rana() {
     }
 
