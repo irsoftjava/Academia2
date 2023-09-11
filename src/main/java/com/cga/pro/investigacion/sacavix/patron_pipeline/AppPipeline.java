@@ -12,6 +12,7 @@ public class AppPipeline {
                 .addHandler(new StringToListHandler());
 
         List<Character> res = filters.execute("Pan12Con34Timba");
+        System.out.println();
         res.forEach(System.out::print);
     }
 }
