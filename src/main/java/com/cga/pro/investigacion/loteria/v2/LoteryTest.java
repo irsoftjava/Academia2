@@ -1,7 +1,5 @@
 package com.cga.pro.investigacion.loteria.v2;
 
-import java.util.Arrays;
-
 public class LoteryTest {
 
     public static void main(String[] args) {
@@ -57,10 +55,10 @@ public class LoteryTest {
 
             bets2 = lineas.replaceAll("\t", ",").replaceAll("/", ",");
 
-            Integer[] info = Arrays.stream(bets2.split(",")
+            //Integer[] info = Arrays.stream(bets2.split(",");
                     //Arrays.stream(bets2.trim().split(",")).map(Integer::parseInt);
 
-                    System.out.println(Arrays.toString(info));
+            //System.out.println(Arrays.toString(info));
 
         }
 
