@@ -44,7 +44,7 @@ public class AppLoteria {
 
             if (aciertos >= 3) {
                 c++;
-                System.out.println("    " + c + " ->" + tiradas + " -> " + aciertos);
+                System.out.println("    " + c + " -> " + tiradas + " -> " + aciertos);
             }
         }
     }
