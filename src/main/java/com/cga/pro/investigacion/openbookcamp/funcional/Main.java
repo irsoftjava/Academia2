@@ -44,7 +44,9 @@ public class Main {
 
         int[] numeros = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         var stNumeros = Arrays.stream(numeros);
-        var resultado = stNumeros.filter(x -> x % 2 == 0).reduce(0, (x, y) -> {
+        var resultado = stNumeros
+                .map( x -> x * 2)
+                .filter(x -> x % 2 == 0).reduce(0, (x, y) -> {
             System.out.println("X es " + x + " Y es " + y);
             return x + y;
         });
