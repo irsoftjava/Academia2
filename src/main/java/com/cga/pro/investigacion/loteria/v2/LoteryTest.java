@@ -1,5 +1,6 @@
 package com.cga.pro.investigacion.loteria.v2;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -52,12 +53,14 @@ public class LoteryTest {
                 "20/10/2022	10	24	30	34	47	48	14	7"
         );
 
-        List<Integer> integerList = bets
-                .flatMap(line -> Stream.of(line.split("[\t/]+")))
-                .filter(s -> !s.isEmpty())
-                .map(Integer::parseInt)
-                .toList();
+//        List<Integer> integerList = bets
+//                .flatMap(line -> Stream.of(line.split("[\t/]+")))
+//                .filter(s -> !s.isEmpty())
+//                .map(Integer::parseInt)
+//                .toList();
+//
+//        System.out.println(integerList);
 
-        System.out.println(integerList);
+
     }
 }
