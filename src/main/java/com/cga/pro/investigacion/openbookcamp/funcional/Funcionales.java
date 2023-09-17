@@ -9,9 +9,11 @@ public class Funcionales {
     public void pruebas() {
         System.out.println(toMayus.apply("Yamil"));
         System.out.println(sumador.apply(5));
+
+        Saluda(toMayus, "Victor Hugo");
     }
 
     public void Saluda(Function<String, String> miFuncion, String nombre) {
-        miFuncion.apply(nombre);
+        System.out.println(miFuncion.apply(nombre));
     }
 }

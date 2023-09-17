@@ -1,5 +1,8 @@
 package com.cga.pro.investigacion.openbookcamp.funcional;
 
+import java.util.ArrayList;
+import java.util.stream.Stream;
+
 public class Main {
 
     public static String toMayuscula (String nombre){
@@ -23,5 +26,13 @@ public class Main {
 
         Funcionales f = new Funcionales();
         f.pruebas();
+
+        ArrayList<String> nombres = new ArrayList<>();
+        nombres.add("Paco");
+        nombres.add("Pepe");
+        nombres.add("Juan");
+
+        Stream<String> valores = nombres.stream().map(x -> "Hola: " + x.toUpperCase());
+        valores.forEach(x -> System.out.println(x));
     }
 }
