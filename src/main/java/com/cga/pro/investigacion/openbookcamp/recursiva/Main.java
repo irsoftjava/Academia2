@@ -6,8 +6,8 @@ public class Main {
 
     /**
      * Suma iterativa
-     * @param max
-     * @return
+     * @param max int
+     * @return int
      */
     public static int sumaIterativa(int max) {
         int resultado = 0;
@@ -21,7 +21,7 @@ public class Main {
 
     /**
      * Recursividad por Cola o tailRecursion
-     * @param numero
+     * @param numero int
      * @return int
      */
     public static int sumaRecursiva(int numero) {
@@ -31,7 +31,7 @@ public class Main {
 
     /**
      * Recursividad por Cabeza o headRecursion
-     * @param valor
+     * @param valor int
      */
     public static void headRecursion(int valor) {
         if (valor == 0) {
@@ -68,8 +68,15 @@ public class Main {
     }
 
     public static void main(String[] args) {
+
         System.out.println("Suma Iterativa: " + sumaIterativa(5));
-        System.out.println("Suma Recursiva: " + sumaRecursiva(5));
+        long tiempoInicial = System.currentTimeMillis();
+        for (int i = 0; i < 1000000; i++) {
+            sumaIterativa(5);
+        }
+        //System.out.println("Suma Recursiva: " + sumaRecursiva(5));
+        long tiempoFinal = System.currentTimeMillis();
+        System.out.println("Tiempo: " + (tiempoFinal-tiempoInicial));
         //headRecursion(5);
         System.out.println("Suma Funcional: " + sumaFuncional(5));
         System.out.println();
