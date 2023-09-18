@@ -1,6 +1,7 @@
 package com.cga.pro.investigacion.loteria.v2;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -60,7 +61,8 @@ public class LoteryTest {
 //                .toList();
 //
 //        System.out.println(integerList);
+        bets.map(x -> x.split("[\t/]")).toList();
 
-
+        System.out.println(bets.toString());
     }
 }
